@@ -1,6 +1,5 @@
-streamlit
-tensorflow
-pillow
+streamlit==1.24.0
+tensorflow-cpu==2.10.1
+Pillow
 numpy
-opencv-python
 reportlab

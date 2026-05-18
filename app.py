@@ -5,13 +5,6 @@ from PIL import Image
 import io
 import time
 from datetime import datetime
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.units import inch
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.pdfgen import canvas
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak, Image as RLImage
-from reportlab.lib import colors
 
 from tensorflow.keras.applications import DenseNet121
 from tensorflow.keras.models import Sequential
@@ -674,6 +667,7 @@ def generate_pdf_report(image, disease_name, confidence_percent):
     pdf_buffer = io.BytesIO()
     
     # Create PDF document
+    from reportlab.lib.pagesizes import letter
     from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image as RLImage, Table, TableStyle, PageBreak
     from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
     from reportlab.lib.units import inch
